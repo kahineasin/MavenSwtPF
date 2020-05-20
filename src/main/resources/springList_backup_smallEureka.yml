@@ -1,0 +1,17 @@
+list: 
+  - 
+    springName: eureka
+    jarPath: eureka-server-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/eureka-server-0.0.1-SNAPSHOT.jar
+  - 
+    springName: config-server(1)
+    jarPath: D://eclipse_release/springCloudPF/config-server-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/config-server-0.0.1-SNAPSHOT.jar --eureka.instance.instance-id=config-server1
+    serviceName: CONFIG-SERVER
+    instanceName: config-server1
+  - 
+    springName: config-server(2)
+    jarPath: D://eclipse_release/springCloudPF/config-server-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/config-server-0.0.1-SNAPSHOT.jar --spring.profiles.active=two --eureka.instance.instance-id=config-server2
+    serviceName: CONFIG-SERVER
+    instanceName: config-server2

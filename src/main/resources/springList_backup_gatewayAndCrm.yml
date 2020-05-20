@@ -1,0 +1,27 @@
+list: 
+  - 
+    springName: eureka(8761)
+    jarPath: eureka-server-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/eureka-server-0.0.1-SNAPSHOT.jar
+  - 
+    springName: springBootPF(38101)
+    jarPath: perfect-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/perfect-0.0.1-SNAPSHOT.jar
+    serviceName: SERVICE-CRM
+    instanceName: service-crm1
+  - 
+    springName: springBootPF(38102)
+    jarPath: perfect-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/perfect-0.0.1-SNAPSHOT.jar --server.port=38102 --eureka.instance.instance-id=service-crm2
+    serviceName: SERVICE-CRM
+    instanceName: service-crm2
+  - 
+    springName: springBootPF(38103)
+    jarPath: perfect-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/perfect-0.0.1-SNAPSHOT.jar --server.port=38103 --eureka.instance.instance-id=service-crm3
+    serviceName: SERVICE-CRM
+    instanceName: service-crm3
+  - 
+    springName: service-gateway(38201)
+    jarPath: service-gateway-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/service-gateway-0.0.1-SNAPSHOT.jar --server.port=38201

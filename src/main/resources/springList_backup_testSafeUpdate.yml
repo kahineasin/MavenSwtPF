@@ -1,0 +1,21 @@
+list: 
+  - 
+    springName: eureka
+    jarPath: eureka-server-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/eureka-server-0.0.1-SNAPSHOT.jar
+  - 
+    springName: service-hi(1)
+    jarPath: service-hi-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/service-hi-0.0.1-SNAPSHOT.jar
+    serviceName: SERVICE-HI
+    instanceName: spring-cloud-front1
+  - 
+    springName: service-hi(2)
+    jarPath: service-hi-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/service-hi-0.0.1-SNAPSHOT.jar --spring.profiles.active=two
+    serviceName: SERVICE-HI
+    instanceName: spring-cloud-front2
+  - 
+    springName: service-gateway
+    jarPath: service-gateway-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/service-gateway-0.0.1-SNAPSHOT.jar

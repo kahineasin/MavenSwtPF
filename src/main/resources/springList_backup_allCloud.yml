@@ -1,0 +1,59 @@
+list: 
+  - 
+    springName: eureka
+    jarPath: eureka-server-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/eureka-server-0.0.1-SNAPSHOT.jar
+  - 
+    springName: config-server(1)
+    jarPath: config-server-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/config-server-0.0.1-SNAPSHOT.jar
+  - 
+    springName: config-server(2)
+    jarPath: config-server-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/config-server-0.0.1-SNAPSHOT.jar --spring.profiles.active=two
+  - 
+    springName: demo
+    jarPath: demo.jar
+    javaCmd: java -jar D://eclipse_workspace/springBootDemo/demo-webapp/target/demo.jar
+  - 
+    springName: service-hi(1)
+    jarPath: service-hi-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/service-hi-0.0.1-SNAPSHOT.jar
+  - 
+    springName: service-hi(2)
+    jarPath: service-hi-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/service-hi-0.0.1-SNAPSHOT.jar --spring.profiles.active=two
+  - 
+    springName: springBootPF(1)
+    jarPath: perfect-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/perfect-0.0.1-SNAPSHOT.jar
+    serviceName: SERVICE-CRM
+    instanceName: service-crm1
+  - 
+    springName: springBootPF(2)
+    jarPath: perfect-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/perfect-0.0.1-SNAPSHOT.jar --server.port=38102 --eureka.instance.instance-id=service-crm2
+    serviceName: SERVICE-CRM
+    instanceName: service-crm2
+  - 
+    springName: service-ribbon(1)
+    jarPath: service-ribbon-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/service-ribbon-0.0.1-SNAPSHOT.jar --eureka.instance.instance-id=service-ribbon1
+    serviceName: SERVICE-RIBBON
+    instanceName: service-ribbon1
+  - 
+    springName: service-ribbon(2)
+    jarPath: service-ribbon-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/service-ribbon-0.0.1-SNAPSHOT.jar --server.port=8765 --eureka.instance.instance-id=service-ribbon2
+    serviceName: SERVICE-RIBBON
+    instanceName: service-ribbon2
+  - 
+    springName: service-zuul
+    jarPath: service-zuul-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/service-zuul-0.0.1-SNAPSHOT.jar --eureka.instance.instance-id=service-zuul1
+    serviceName: SERVICE-ZUUL
+    instanceName: service-zuul1
+  - 
+    springName: service-gateway
+    jarPath: service-gateway-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/service-gateway-0.0.1-SNAPSHOT.jar

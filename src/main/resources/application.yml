@@ -1,0 +1,27 @@
+########################################################
+### freemarker
+########################################################
+server:
+    port: 28601
+spring:
+    freemarker:
+        allow-request-override: false
+        cache: true
+        charset: UTF-8
+        check-template-location: true
+        content-type: text/html
+        expose-request-attributes: false
+        expose-session-attributes: false
+        expose-spring-macro-helpers: false
+        suffix: .ftl
+        template-loader-path: classpath:/templates/ftl/
+    http:
+        multipart:
+            max-file-size: 100Mb
+            max-request-size: 100Mb
+    servlet:
+        multipart:
+            max-file-size: 100000000
+            max-request-size: 100000000
+pf:
+  appKey: yjquery

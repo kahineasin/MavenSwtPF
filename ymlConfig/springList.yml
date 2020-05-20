@@ -1,0 +1,31 @@
+list: 
+  - 
+    springName: eureka
+    jarPath: eureka-server-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/eureka-server-0.0.1-SNAPSHOT.jar
+  - 
+    springName: config-server(8888)
+    jarPath: config-server-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/config-server-0.0.1-SNAPSHOT.jar
+  - 
+    springName: config-server(8889)
+    jarPath: config-server-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/config-server-0.0.1-SNAPSHOT.jar --spring.profiles.active=two
+  - 
+    springName: perfect-query(28711)
+    jarPath: eureka-server-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/perfectQueryWeb-0.0.1-SNAPSHOT.jar --server.port=28711 --eureka.instance.instance-id=perfect-query1
+    serviceName: PERFECT-QUERY
+    instanceName: perfect-query1
+  - 
+    springName: perfect-query(28712)
+    jarPath: eureka-server-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/perfectQueryWeb-0.0.1-SNAPSHOT.jar --server.port=28712 --eureka.instance.instance-id=perfect-query2
+    serviceName: PERFECT-QUERY
+    instanceName: perfect-query2
+  - 
+    springName: service-zuul(28701)
+    jarPath: service-zuul-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/service-zuul-0.0.1-SNAPSHOT.jar --server.port=28701 --eureka.instance.instance-id=service-zuul1
+    serviceName: SERVICE-ZUUL
+    instanceName: service-zuul1

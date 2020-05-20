@@ -1,0 +1,31 @@
+list: 
+  - 
+    springName: eureka
+    jarPath: eureka-server-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/eureka-server-0.0.1-SNAPSHOT.jar
+  - 
+    springName: config-server(1)
+    jarPath: config-server-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/config-server-0.0.1-SNAPSHOT.jar
+  - 
+    springName: config-server(2)
+    jarPath: config-server-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/config-server-0.0.1-SNAPSHOT.jar --spring.profiles.active=two
+  - 
+    springName: springBootPF(1)
+    jarPath: perfect-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/perfect-0.0.1-SNAPSHOT.jar
+    serviceName: SERVICE-CRM
+    instanceName: service-crm1
+  - 
+    springName: springBootPF(2)
+    jarPath: perfect-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/perfect-0.0.1-SNAPSHOT.jar --server.port=38102 --eureka.instance.instance-id=service-crm2
+    serviceName: SERVICE-CRM
+    instanceName: service-crm2
+  - 
+    springName: service-zuul
+    jarPath: service-zuul-0.0.1-SNAPSHOT.jar
+    javaCmd: java -jar D://eclipse_release/springCloudPF/service-zuul-0.0.1-SNAPSHOT.jar --eureka.instance.instance-id=service-zuul1
+    serviceName: SERVICE-ZUUL
+    instanceName: service-zuul1
